@@ -1,0 +1,22 @@
+/*
+ * Copyright (c) 2022 Javatar LLC
+ * All rights reserved.
+ */
+
+package middleware;
+
+/**
+ * @author Vladyslav Gural / Javatar LLC
+ * @version 21-02-2022
+ */
+public class RoleCheckMiddleware extends Middleware {
+    @Override
+    public boolean check(String email, String password) {
+        if (email.equals("admin@example.com")) {
+            System.out.println("Hello admin!");
+            return true;
+        }
+        System.out.println("Hello user!");
+        return checkNext(email, password);
+    }
+}

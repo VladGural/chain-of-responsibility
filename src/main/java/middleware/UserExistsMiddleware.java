@@ -11,7 +11,7 @@ import server.Server;
  * @author Vladyslav Gural / Javatar LLC
  * @version 19-02-2022
  */
-class UserExistsMiddleware extends Middleware {
+public class UserExistsMiddleware extends Middleware {
     private Server server;
 
     public UserExistsMiddleware(Server server) {
